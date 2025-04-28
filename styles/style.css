@@ -1,0 +1,343 @@
+/* الخط العام */
+body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #222;
+    line-height: 2;
+    text-align: right;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  /* الحاويات */
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  /* الهيدر */
+  header {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 6rem 2rem;
+    border-bottom: 2px solid #f7b500;
+  }
+  
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  header p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cv-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .cv-button {
+    background-color: #f7b500;
+    color: #001f3f;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cv-button:hover {
+    background-color: #ffc400;
+    transform: scale(1.05);
+  }
+  
+  /* الأقسام */
+  section {
+    padding: 5rem 0;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+  
+  section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  h2 {
+    color: #001f3f;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* من أنا */
+  #about .container,
+  #skills {
+    text-align: center;
+  }
+  
+  #about p {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  /* قسم المهارات */
+  #skills {
+    background-color: #f0f4f8;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center;
+  }
+  
+  .skill {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+  }
+  
+  .skill:hover {
+    transform: translateY(-8px);
+  }
+  
+  .skill img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .skill p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  /* قسم الشهادات */
+  #certificates {
+    background-color: #fff;
+  }
+  
+  .certificates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .certificate-card {
+    background-color: #f0f4f8;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .certificate-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* قسم المشاريع */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .project-card {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #f7b500;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .project-link:hover {
+    color: #ffcc00;
+  }
+  
+  /* التواصل */
+  #contact p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  #contact a {
+    color: #001f3f;
+    text-decoration: underline;
+  }
+  
+  /* الفوتر */
+  footer {
+    background-color: #eee;
+    text-align: center;
+    padding: 2rem;
+    font-size: 1rem;
+  }
+  
+  /* زر العودة للأعلى */
+  #scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    left: 30px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.8rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+    z-index: 1000;
+  }
+  
+  #scrollTopBtn:hover {
+    background-color: #003366;
+  }
+  
+  /* استجابة الشاشات الصغيرة */
+  @media (max-width: 768px) {
+    header {
+      padding: 4rem 1rem;
+    }
+  
+    header h1 {
+      font-size: 2.2rem;
+    }
+  
+    header p {
+      font-size: 1.2rem;
+    }
+  
+    .cv-buttons {
+      flex-direction: column;
+    }
+  
+    .skills-grid,
+    .projects-grid,
+    .certificates-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    #about p {
+      padding: 0 1rem;
+    }
+  }
+  /* رابط واتساب */
+#whatsapp-contact {
+    text-align: center;
+    padding: 3rem 0;
+    background-color: #e0f7e9;
+  }
+  
+  .whatsapp-button {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .whatsapp-button i {
+    margin-left: 0.5rem;
+  }
+  
+  .whatsapp-button:hover {
+    background-color: #20c15c;
+    transform: scale(1.05);
+  }
+  /* قسم التواصل الجديد */
+.contact-buttons {
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
+  
+  .contact-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-button i {
+    font-size: 1.5rem;
+  }
+  
+  /* ألوان الأزرار */
+  .contact-button.whatsapp {
+    background-color: #25D366;
+    color: white;
+  }
+  
+  .contact-button.email {
+    background-color: #f7b500;
+    color: #001f3f;
+  }
+  
+  .contact-button.linkedin {
+    background-color: #0077b5;
+    color: white;
+  }
+  
+  /* تأثير الهوفر */
+  .contact-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* نصوص قسم التواصل */
+  #contact p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #555;
+  }
+  
+  #contact h2 {
+    font-size: 2.8rem;
+    color: #001f3f;
+  }
+  

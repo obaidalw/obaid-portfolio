@@ -4,80 +4,160 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>محفظة عبيد</title>
-  <!-- استيراد خط عربي جميل -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- خط عصري -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <!-- أيقونات FontAwesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="manifest" href="favicon_io/site.webmanifest">
-  <link rel="icon" href="favicon_io/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- ملف التنسيقات -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/Logo.Svg" type="image/png">
 </head>
+
 <body>
 
+  <!-- الهيدر -->
   <header>
-    <h1>مرحباً، أنا عبيد</h1>
-    <p>مصمم صفحات ويب ومهتم بتجربة المستخدم</p>
-  </header>
-
-  <section>
-    <h2>من أنا</h2>
-    <p>
-      أملك شهادة دبلوم في تصميم الويب وتجربة المستخدم، وأسعى لصناعة تجارب رقمية جذابة وسهلة الاستخدام.  
-      أؤمن أن التصميم الجيد لا يتعلق فقط بالشكل، بل بالشعور الذي يتركه لدى المستخدم.
-    </p>
-  </section>
-
-  <section>
-    <h2>المهارات</h2>
-    <ul>
-      <li>تصميم واجهات المستخدم (UI) باستخدام Figma وAdobe XD</li>
-      <li>تحسين تجربة المستخدم من خلال دراسة سلوك المستخدمين</li>
-      <li>تصميم صفحات الويب باستخدام HTML5 وCSS3</li>
-      <li>أساسيات JavaScript</li>
-      <li>تصميم متجاوب (Responsive Design)</li>
-      <li>التفكير التصميمي وحل المشكلات بإبداع</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>مشاريعي</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <h3><a href="landing page.pdf" class="project-link">🎯 صفحة هبوط لتطبيق إدارة مهام</a></h3>
-        <p>تصميم صفحة تروّج لتطبيق يساعد على تنظيم المهام اليومية بسهولة وفعالية.</p>
-        <strong>الأدوات:</strong> Figma، HTML، CSS، JavaScript
-      </div>
-      <div class="project-card">
-        <h3><a href="web food.pdf" class="project-link">🍽️ موقع لمطعم عصري</a></h3>
-        <p>موقع بسيط لمطعم بتصميم متجاوب يوضح القائمة والموقع وطريقة الحجز.</p>
-        <strong>الأدوات:</strong> HTML، CSS، Responsive Design
-      </div>
-      <div class="project-card">
-        <h3><a href="login.pdf" class="project-link">🔄 إعادة تصميم تجربة مستخدم</a></h3>
-        <p>تحسين واجهة تسجيل دخول لتكون أوضح وأسهل للمستخدمين الجدد.</p>
-        <strong>الأدوات:</strong> Figma، UX Research
+    <div class="container">
+      <h1>عبيد الوسيدي</h1>
+      <p>مصمم واجهات وتجربة مستخدم - أصنع أفكارك بإبداع!</p>
+      <div class="cv-buttons">
+        <a href="projects/cv-obaid-ar.pdf" class="cv-button" target="_blank">📄 سيرة ذاتية بالعربية</a>
+        <a href="projects/cv-obaid-en.pdf" class="cv-button" target="_blank">📄 سيرة ذاتية بالإنجليزية</a>
       </div>
     </div>
-    <p style="text-align: center; font-size: 1.2rem; margin-top: 1rem;">
-      اضغط على أي من المشاريع أعلاه لاستكشاف المزيد والتفاصيل.
-    </p>
-  </section>
-  
-  <section>
-    <h2>تواصل معي</h2>
-    <p>
-      يسعدني أن أتواصل معك لأي استفسار أو فرصة عمل!<br>
-      📧 <strong>البريد الإلكتروني:</strong> obaidalwsedy@gmail.com<br>
-      💼 <strong>لينكدإن:</strong> 
-      <a href="https://www.linkedin.com/in/obaid-alwsedy" target="_blank">linkedin.com/in/obaid-alwsedy</a><br>
-      <a href="cv.pdf" target="_blank" class="cv-button">
-        📄 تحميل السيرة الذاتية (PDF)
-      </a>
-    </p>
+  </header>
+
+  <!-- قسم من أنا -->
+  <section id="about">
+    <div class="container">
+      <h2>من أنا</h2>
+      <p>
+          مصمم صفحات الويب وتجربة مستخدم أمتلك شغفًا بابتكار تصاميم حديثة، عملية، وسهلة الاستخدام، تركز على تحقيق تجربة مثالية للمستخدم</p>
+    </div>
   </section>
 
+  <!-- قسم المهارات -->
+  <section id="skills">
+    <div class="container">
+      <h2>مهاراتي وتقنياتي</h2>
+      <div class="skills-grid">
+        <div class="skill"><img src="icons/html5.svg" alt="HTML5"><p>HTML5</p></div>
+        <div class="skill"><img src="icons/css3.svg" alt="CSS3"><p>CSS3</p></div>
+        <div class="skill"><img src="icons/javascript.svg" alt="JavaScript"><p>JavaScript</p></div>
+        <div class="skill"><img src="icons/figma.svg" alt="Figma"><p>Figma</p></div>
+        <div class="skill"><img src="icons/adobexd.svg" alt="Adobe XD"><p>Adobe XD</p></div>
+        <div class="skill"><img src="icons/photoshop.svg" alt="Photoshop"><p>Photoshop</p></div>
+        <div class="skill"><img src="icons/illustrator.svg" alt="Illustrator"><p>Illustrator</p></div>
+        <div class="skill"><img src="icons/chat-gpt.svg" alt="Chat GPT"><p>ChatGPT</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم الشهادات -->
+  <section id="certificates">
+    <div class="container">
+      <h2>شهاداتي</h2>
+      <div class="certificates-grid">
+        <div class="certificate-card">
+          <h3>دبلوم تصميم صفحات الويب وتجربة المستخدم</h3>
+          <p>2024 -  شهادة معتمد من الكلية التطبيقية جامعة القصيم </p>
+        </div>
+        <div class="certificate-card">
+          <h3>الثانوية العامة - علمي</h3>
+          <p>2019 - شهادة معتمدة من وزارة التعليم في القصيم</p>
+        </div>
+        <div class="certificate-card">
+            <h3>وثيقة عمل حر</h3>
+            <p>2024 - شهادة معتمدة من الموارد البشرية</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم المشاريع -->
+  <section id="projects">
+    <div class="container">
+      <h2>مشاريعي</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>تطبيق إدارة مهام</h3>
+          <p>صفحة هبوط لتطبيق يساعد على تنظيم المهام اليومية بسهولة وأناقة.</p>
+          <a href="projects/Task-application.pdf" target="_blank" class="project-link">🔗 معاينة المشروع</a>
+        </div>
+        <div class="project-card">
+          <h3>موقع مطعم عصري</h3>
+          <p>موقع تفاعلي يعرض قائمة الطعام ومعلومات الحجز بطريقة جذابة.</p>
+          <a href="projects/web-food.pdf" target="_blank" class="project-link">🔗 معاينة المشروع</a>
+        </div>
+        <div class="project-card">
+          <h3>تحسين تسجيل دخول</h3>
+          <p>تصميم واجهة تسجيل دخول عصرية مع تعزيز تجربة المستخدم.</p>
+          <a href="projects/Login-page.pdf" target="_blank" class="project-link">🔗 معاينة المشروع</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- قسم التواصل الجديد -->
+<section id="contact">
+    <div class="container">
+      <h2>تواصل معي</h2>
+      <p>هل لديك فكرة رائعة أو مشروع مميز؟ دعنا نحوله إلى واقع!</p>
+  
+      <div class="contact-buttons">
+        <a href="https://wa.me/966550451410" target="_blank" class="contact-button whatsapp">
+          <i class="fab fa-whatsapp"></i> تواصل عبر واتساب
+        </a>
+        <a href="mailto:obaidalwsedy@gmail.com" class="contact-button email">
+          <i class="fas fa-envelope"></i> راسلني عبر الإيميل
+        </a>
+        <a href="https://www.linkedin.com/in/obaid-alwsedy" target="_blank" class="contact-button linkedin">
+          <i class="fab fa-linkedin"></i> زيارة لينكدإن
+        </a>
+      </div>
+    </div>
+  </section>
+  
+  
+  <!-- الفوتر -->
   <footer>
-    &copy; 2025 عبيد. جميع الحقوق محفوظة.
+    &copy; 2025 عبيد الوسيدي. جميع الحقوق محفوظة.
   </footer>
+
+  <!-- زر العودة للأعلى -->
+  <button id="scrollTopBtn" onclick="scrollToTop()">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- سكريبتات الحركات -->
+  <script>
+    window.onscroll = function() {
+      var btn = document.getElementById("scrollTopBtn");
+      if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
+        btn.style.opacity = 1;
+        btn.style.pointerEvents = "auto";
+      } else {
+        btn.style.opacity = 0;
+        btn.style.pointerEvents = "none";
+      }
+
+      document.querySelectorAll('section').forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if(rect.top < window.innerHeight - 100) {
+          section.classList.add('visible');
+        }
+      });
+    };
+
+    function scrollToTop() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    }
+  </script>
 
 </body>
 </html>
